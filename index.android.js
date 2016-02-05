@@ -67,7 +67,7 @@ class AwesomeProject extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.rightcontainer}>
-          <Text style={styles.header}>"Reply #"{post.id}" - "{post.email}</Text>
+          <Text style={styles.header}>{"Reply #"}{post.id}{" - "}{post.email}</Text>
           <Text style={styles.title}>{post.name}</Text>
           <Text style={styles.content}>{post.body}</Text>
         </View>
@@ -99,7 +99,7 @@ var styles = StyleSheet.create({
     color:'black',
   },
   header: {
-  	fontSize: 18,
+    fontSize: 18,
     marginTop: 35,
   },
   listview: {
