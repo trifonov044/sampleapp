@@ -1,5 +1,14 @@
 'use strict';
-import React, { AppRegistry, Component, ListView, StyleSheet, Text, View, } from 'react-native';
+
+var React = require('react-native');
+var {
+  AppRegistry,
+  Component,
+  ListView,
+  StyleSheet,
+  Text,
+  View,
+} = React;
 
 var REQUEST_URL = 'http://jsonplaceholder.typicode.com/comments';
 
@@ -58,7 +67,7 @@ class AwesomeProject extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.rightcontainer}>
-          <Text style={styles.header}>Reply #{post.id} - {post.email}</Text>
+          <Text style={styles.header}>"Reply #"{post.id}" - "{post.email}</Text>
           <Text style={styles.title}>{post.name}</Text>
           <Text style={styles.content}>{post.body}</Text>
         </View>
@@ -69,33 +78,33 @@ class AwesomeProject extends Component {
 
 var styles = StyleSheet.create({
   container: {
-	flex: 1,
-	flexDirection: 'row',
-	justifyContent: 'center',
-	alignItems: 'center',
-	backgroundColor: '#F5FCFF',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
   rightcontainer: {
-	flex: 1,
+    flex: 1,
   },
   title: {
-	textAlign: 'left',
-	fontSize: 18,
-	fontWeight: 'bold',
-	color:'black',
+    textAlign: 'left',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color:'black',
   },
-  content: {
-	textAlign: 'left',
-	fontSize: 21,
-	color:'black',
+    content: {
+    textAlign: 'left',
+    fontSize: 21,
+    color:'black',
   },
   header: {
-	fontSize: 18,
-	marginTop: 35,
+  	fontSize: 18,
+    marginTop: 35,
   },
   listview: {
-	paddingLeft: 30,
-	backgroundColor: '#F5FCFF',
+    paddingLeft: 30,
+    backgroundColor: '#F5FCFF',
   },
 });
 
